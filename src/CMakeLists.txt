@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.0.2)
+project(math_test)
+
+add_subdirectory(math)
+add_subdirectory(models)
+add_subdirectory(Maps)
+add_subdirectory(utils)
+add_subdirectory(pathsearcher)
+
+SET(PLANNING_LIBRARIES 
+    ${BORIS_MATH_LIBRARIES} 
+    ${BORIS_MAP_LIBRARIES} ${VEHICLE_MODELS_LIBRARIES}
+    ${PLANNING_UTILS_LIBRARIES}  ${PATH_SEARCHER_LIBRARIES} 
+    PARENT_SCOPE)
+
+SET(PLANNING_INCLUDE_DIRS 
+    ${BORIS_MATH_INCLUDE_DIRS} ${PATH_SEARCHER_INCLUDE_DIRS} ${PLANNING_UTILS_INCLUDE_DIRS} 
+    ${BORIS_MAP_INCLUDE_DIRS} ${VEHICLE_MODELS_INCLUDE_DIRS}
+    PARENT_SCOPE)
