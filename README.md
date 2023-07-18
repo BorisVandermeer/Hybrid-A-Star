@@ -1,6 +1,6 @@
 # Hybrid A Star 的实现
 
-[Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FBorisVandermeer&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
+![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FBorisVandermeer&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
 
 一个Hybrid A Star 的基础实现。
 使用多个圆描述车辆的碰撞，模拟阿克曼转向模拟车辆的运动。
