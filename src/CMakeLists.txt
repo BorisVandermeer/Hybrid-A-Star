@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(math_test)
 
-add_subdirectory(math)
 add_subdirectory(models)
 add_subdirectory(Maps)
 add_subdirectory(utils)

@@ -5,19 +5,10 @@ SET(CMAKE_BUILD_TYPE "Debug")
 SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g2 -ggdb")
 SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 
-find_package(OpenCV REQUIRED)
+
 
 include_directories(${PLANNING_INCLUDE_DIRS})
 include_directories(${OpenCV_INCLUDE_DIRS})
-
-add_executable(test_math_spline math/test_math_spline.cpp)
-target_link_libraries(test_math_spline ${OpenCV_LIBS} ${PLANNING_LIBRARIES})
-
-add_executable(test_math_spline_curve math/test_math_spline_curve.cpp)
-target_link_libraries(test_math_spline_curve ${OpenCV_LIBS} ${PLANNING_LIBRARIES})
-
-add_executable(test_math_RS math/test_math_RS.cpp)
-target_link_libraries(test_math_RS ${OpenCV_LIBS} ${PLANNING_LIBRARIES})
 
 add_executable(test_map_gridmap_dilate maps/test_map_Dilate.cpp)
 target_link_libraries(test_map_gridmap_dilate ${OpenCV_LIBS} ${PLANNING_LIBRARIES})

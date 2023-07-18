@@ -1,8 +1,9 @@
 # Hybrid A Star 的实现
 
-参考仓库 : [zm0612/Hybrid_A_Star](https://github.com/zm0612/Hybrid_A_Star)
+[Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FBorisVandermeer&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)
 
-相较与参考仓库，将库抽离了ROS，并在app/node中实现了一个基本的规划Demo。更改碰撞计算为多圆模型。并且对Cost的计算也进行了一定的优化。并且取消了对Eigen库的依赖。
+一个Hybrid A Star 的基础实现。
+使用多个圆描述车辆的碰撞，模拟阿克曼转向模拟车辆的运动。
 
 用户可继承HybridAStar类，并且修改其中的虚函数以实现自己的Hybrid A Star 子类。
 
@@ -10,13 +11,17 @@
 
 - 仓库显示使用的是OpenCV 4 实现的。仅用于显示。
 
-``` shell
+``` bash
+# Setup
+bash ./Setup.sh
+
+# build
 mkdir build && cd build
 cmake ..
 make
 ```
 
-- Run A Demo
+## Run A Demo
 
 ``` shell
 ./build/node
