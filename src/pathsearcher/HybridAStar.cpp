@@ -296,7 +296,7 @@ namespace HybridAStarGlobal{
                     StateNodeMap[curidx.x][curidx.y][curidx.phi] = pcur;
                     Neighbors.push_back(curidx);
                 } else if(StateNodeMap[curidx.x][curidx.y][curidx.phi]->status!=StateNode::IN_CLOSESET
-                            &&(StateNodeMap[curidx.x][curidx.y][curidx.phi]->CostG)<(pcur->CostG)){
+                            &&(StateNodeMap[curidx.x][curidx.y][curidx.phi]->CostG)>(pcur->CostG)){
                     StateNodeMap[curidx.x][curidx.y][curidx.phi] = pcur;
                     Neighbors.push_back(curidx);
                 } else{}
